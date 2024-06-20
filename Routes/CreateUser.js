@@ -29,7 +29,7 @@ router.post('/createuser',[
         await User.create({
             name:req.body.name,   //all this bcoz we have to take the input from the user
             // password:secPassword,
-            password,  //creates secure password
+            password: req.body.password,  //creates secure password
             email:req.body.email,
             location:req.body.location,
         })
